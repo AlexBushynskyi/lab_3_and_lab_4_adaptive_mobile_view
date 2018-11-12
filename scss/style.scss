@@ -44,7 +44,7 @@ body {
 @media (max-width: 319px) {
 	.content_on_image {
 		@include flexbox(flex, column, space-around, center);
-		height: 950px;
+		height: 980px;
 		.logo_and_text {
 			img {
 				margin-top: 50px;
@@ -69,9 +69,9 @@ body {
 		}
 	}
 	.img_main {
-		height:1000px;
+		height: 980px;
 		img {
-			height:1000px;
+			height: 980px;
 		}
 	}
 	.block_after_image {
@@ -107,7 +107,7 @@ body {
 @media (max-width: 400px) and (min-width: 320px) {
 	.content_on_image {
 		@include flexbox(flex, column, space-around, center);
-		height: 950px;
+		height: 980px;
 		.logo_and_text {
 			img {
 				margin-top: 50px;
@@ -132,9 +132,9 @@ body {
 		}
 	}
 	.img_main {
-		height:1000px;
+		height:980px;
 		img {
-			height:1000px;
+			height:980px;
 		}
 	}
 	.block_after_image {
@@ -167,7 +167,7 @@ body {
 	}
 }
 
-@media (max-width: 800px) and (min-width: 401px){
+@media (max-width: 799px) and (min-width: 401px){
 	.content_on_image {
 		@include flexbox(flex, column, space-around, center);
 		height: 850px;
@@ -188,6 +188,7 @@ body {
 	}
 	.img_main {
 		height: 850px;
+		overflow: hidden;
 		img {
 			height: 850px;
 		}
@@ -221,7 +222,7 @@ body {
 	}
 }
 
-@media (min-width: 801px) {
+@media (min-width: 800px) {
 	.content_on_image {
 		height: 670px;
 		@include flexbox(flex, row, space-around, center);
@@ -636,5 +637,3 @@ body {
 		}
 	}
 }
-
-
