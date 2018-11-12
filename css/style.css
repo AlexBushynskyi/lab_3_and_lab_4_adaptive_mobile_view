@@ -1,0 +1,619 @@
+@font-face {
+  font-family: "Catamaran";
+  src: local("Catamaran Light"), local("Catamaran-Light"), url("../fonts/Catamaranlight.woff2") format("woff2"), url("Catamaranlight.woff") format("woff"), url("Catamaranlight.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Catamaran";
+  src: local("Catamaran"), local("Catamaran-Regular"), url("../fonts/Catamaran.woff2") format("woff2"), url("Catamaran.woff") format("woff"), url("Catamaran.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Catamaran";
+  src: local("Catamaran SemiBold"), local("Catamaran-SemiBold"), url("../fonts/Catamaransemibold.woff2") format("woff2"), url("Catamaransemibold.woff") format("woff"), url("Catamaransemibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Catamaran";
+  src: local("Catamaran Thin"), local("Catamaran-Thin"), url("../fonts/Catamaranthin.woff2") format("woff2"), url("Catamaranthin.woff") format("woff"), url("Catamaranthin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Catamaran";
+  src: local("Catamaran ExtraBold"), local("Catamaran-ExtraBold"), url("../fonts/Catamaranextrabold.woff2") format("woff2"), url("Catamaranextrabold.woff") format("woff"), url("Catamaranextrabold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Catamaran";
+  src: local("Catamaran Heavy"), local("Catamaran-Heavy"), url("../fonts/Catamaranheavy.woff2") format("woff2"), url("Catamaranheavy.woff") format("woff"), url("Catamaranheavy.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Catamaran";
+  src: local("Catamaran Medium"), local("Catamaran-Medium"), url("../fonts/Catamaranmedium.woff2") format("woff2"), url("Catamaranmedium.woff") format("woff"), url("Catamaranmedium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Catamaran";
+  src: local("Catamaran ExtraLight"), local("Catamaran-ExtraLight"), url("../fonts/Catamaranextralight.woff2") format("woff2"), url("Catamaranextralight.woff") format("woff"), url("Catamaranextralight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Catamaran";
+  src: local("Catamaran Bold"), local("Catamaran-Bold"), url("../fonts/Catamaranbold.woff2") format("woff2"), url("Catamaranbold.woff") format("woff"), url("Catamaranbold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Catamaran-Black";
+  src: url("../fonts/Catamaran-Black.ttf");
+}
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.black_text {
+  color: #333333;
+  background-color: #ffffff;
+}
+
+.white_text {
+  color: #ffffff;
+  background-color: #333333;
+}
+
+.visible_forms {
+  height: 0;
+  visibility: hidden;
+}
+
+.form_height_small {
+  height: 255px;
+  margin-bottom: 165px;
+}
+
+.form_height_big {
+  height: 420px;
+}
+
+@media (max-width: 319px) {
+  .content_on_image {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 950px;
+  }
+  .content_on_image .logo_and_text img {
+    margin-top: 50px;
+  }
+  .content_on_image .logo_and_text .text {
+    height: 200px;
+  }
+  .content_on_image .form_login {
+    width: 310px;
+  }
+  .content_on_image .form_login .join_us, .content_on_image .form_login .sign_in {
+    width: 155px;
+  }
+  .content_on_image .form_login #join_us input, .content_on_image .form_login #sign_in input {
+    width: 280px;
+  }
+  .content_on_image .form_login #join_us button, .content_on_image .form_login #sign_in button {
+    width: 280px;
+  }
+
+  .img_main {
+    height: 1000px;
+  }
+  .img_main img {
+    height: 1000px;
+  }
+
+  .block_after_image {
+    margin: 0 10px;
+    min-width: 310px;
+  }
+  .block_after_image .blue_text {
+    font-size: 26px;
+  }
+
+  .block_how_it_works div img {
+    margin-top: 20px;
+  }
+
+  footer div {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  footer div img {
+    margin-top: 25px;
+  }
+  footer div .connect_with_us .white_line {
+    line-height: 36px;
+  }
+}
+@media (max-width: 400px) and (min-width: 320px) {
+  .content_on_image {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 950px;
+  }
+  .content_on_image .logo_and_text img {
+    margin-top: 50px;
+  }
+  .content_on_image .logo_and_text .text {
+    height: 200px;
+  }
+  .content_on_image .form_login {
+    width: 310px;
+  }
+  .content_on_image .form_login .join_us, .content_on_image .form_login .sign_in {
+    width: 155px;
+  }
+  .content_on_image .form_login #join_us input, .content_on_image .form_login #sign_in input {
+    width: 280px;
+  }
+  .content_on_image .form_login #join_us button, .content_on_image .form_login #sign_in button {
+    width: 280px;
+  }
+
+  .img_main {
+    height: 1000px;
+  }
+  .img_main img {
+    height: 1000px;
+  }
+
+  .block_after_image {
+    margin: 0 10px;
+    min-width: 310px;
+  }
+  .block_after_image .blue_text {
+    font-size: 26px;
+  }
+
+  .block_how_it_works div img {
+    margin-top: 20px;
+  }
+
+  footer div {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  footer div img {
+    margin-top: 25px;
+  }
+  footer div .connect_with_us .white_line {
+    line-height: 36px;
+  }
+}
+@media (max-width: 800px) and (min-width: 401px) {
+  .content_on_image {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 850px;
+  }
+  .content_on_image .form_login {
+    width: 380px;
+  }
+  .content_on_image .form_login .join_us, .content_on_image .form_login .sign_in {
+    width: 190px;
+  }
+  .content_on_image .form_login #join_us input, .content_on_image .form_login #sign_in input {
+    width: 340px;
+  }
+  .content_on_image .form_login #join_us button, .content_on_image .form_login #sign_in button {
+    width: 350px;
+  }
+
+  .img_main {
+    height: 850px;
+  }
+  .img_main img {
+    height: 850px;
+  }
+
+  .block_after_image {
+    margin: 0 10px;
+  }
+  .block_after_image .blue_text {
+    font-size: 30px;
+  }
+
+  .block_how_it_works div img {
+    margin-top: 20px;
+  }
+
+  footer div {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  footer div img {
+    margin-top: 25px;
+  }
+  footer div .connect_with_us .white_line {
+    line-height: 36px;
+  }
+}
+@media (min-width: 801px) {
+  .content_on_image {
+    height: 670px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .content_on_image .form_login {
+    width: 380px;
+  }
+  .content_on_image .form_login .join_us, .content_on_image .form_login .sign_in {
+    width: 190px;
+  }
+  .content_on_image .form_login #join_us input, .content_on_image .form_login #sign_in input {
+    width: 340px;
+  }
+  .content_on_image .form_login #join_us button, .content_on_image .form_login #sign_in button {
+    width: 350px;
+  }
+
+  .img_main {
+    height: 670px;
+  }
+  .img_main img {
+    width: 1920px;
+  }
+
+  .block_after_image {
+    margin: 0 auto;
+  }
+  .block_after_image .blue_text {
+    font-size: 30px;
+  }
+
+  footer div {
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.switch_color_blue .item .img_main {
+  background-image: linear-gradient(to top, #00f1ff 0%, #00a8b2 100%);
+}
+.switch_color_blue .item .content_on_image .form_login #join_us button, .switch_color_blue .item .content_on_image .form_login #sign_in button {
+  background-color: #ff6600;
+}
+.switch_color_blue .item .block_after_image .blue_text {
+  color: #00a8b2;
+}
+.switch_color_blue .item .block_after_image .block_how_it_works div .blue_text_small {
+  color: #00a8b2;
+}
+
+.switch_color_green .item .img_main {
+  background-image: linear-gradient(to top, #ABF26D 0%, #469400 100%);
+}
+.switch_color_green .item .content_on_image .form_login #join_us button, .switch_color_green .item .content_on_image .form_login #sign_in button {
+  background-color: #F13C76;
+}
+.switch_color_green .item .block_after_image .blue_text {
+  color: #469400;
+}
+.switch_color_green .item .block_after_image .block_how_it_works div .blue_text_small {
+  color: #469400;
+}
+
+.switch_color_yellow .item .img_main {
+  background-image: linear-gradient(to top, #FFDD73 0%, #A67D00 100%);
+}
+.switch_color_yellow .item .content_on_image .form_login #join_us button, .switch_color_yellow .item .content_on_image .form_login #sign_in button {
+  background-color: #A67D00;
+}
+.switch_color_yellow .item .block_after_image .blue_text {
+  color: #A67D00;
+}
+.switch_color_yellow .item .block_after_image .block_how_it_works div .blue_text_small {
+  color: #A67D00;
+}
+
+.switch_color_magenta .item .img_main {
+  background-image: linear-gradient(to top, #E065BB 0%, #7D0057 100%);
+}
+.switch_color_magenta .item .content_on_image .form_login #join_us button, .switch_color_magenta .item .content_on_image .form_login #sign_in button {
+  background-color: #C7F83E;
+}
+.switch_color_magenta .item .block_after_image .blue_text {
+  color: #7D0057;
+}
+.switch_color_magenta .item .block_after_image .block_how_it_works div .blue_text_small {
+  color: #7D0057;
+}
+
+.switch_color_black .item .img_main {
+  background-image: linear-gradient(to top, #A7A7A7 0%, #717171 100%);
+}
+.switch_color_black .item .content_on_image .form_login #join_us button, .switch_color_black .item .content_on_image .form_login #sign_in button {
+  background-color: #555555;
+}
+.switch_color_black .item .block_after_image .blue_text {
+  color: #393939;
+}
+.switch_color_black .item .block_after_image .block_how_it_works div .blue_text_small {
+  color: #393939;
+}
+
+.all {
+  font-family: Catamaran;
+  max-width: 1920px;
+  margin: 0 auto;
+  min-width: 320px;
+}
+.all .item {
+  max-width: 1920px;
+  min-width: 320px;
+}
+.all .item .img_main {
+  overflow: hidden;
+}
+.all .item .img_main img {
+  opacity: 0.3;
+}
+.all .item .content_on_image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 1200px;
+  min-width: 320px;
+  width: 100%;
+  overflow: hidden;
+  z-index: 2;
+}
+.all .item .content_on_image .logo_and_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.all .item .content_on_image .logo_and_text img {
+  width: 280px;
+  margin-bottom: 55px;
+}
+.all .item .content_on_image .logo_and_text .text {
+  font-size: 36px;
+  max-width: 350px;
+  font-weight: 600;
+  color: #333333;
+  letter-spacing: 3.6px;
+  text-align: center;
+}
+.all .item .content_on_image .logo_and_text .theme_color {
+  max-width: 350px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.all .item .content_on_image .logo_and_text .theme_color div {
+  width: 60px;
+  height: 40px;
+  margin: 10px 5px;
+}
+.all .item .content_on_image .logo_and_text .theme_color .t_blue {
+  background-color: blue;
+}
+.all .item .content_on_image .logo_and_text .theme_color .t_green {
+  background-color: green;
+}
+.all .item .content_on_image .logo_and_text .theme_color .t_yellow {
+  background-color: yellow;
+}
+.all .item .content_on_image .logo_and_text .theme_color .t_magenta {
+  background-color: magenta;
+}
+.all .item .content_on_image .logo_and_text .theme_color .t_black {
+  background-color: black;
+}
+.all .item .content_on_image .form_login {
+  padding: 0;
+  box-shadow: 0 6px 6px 1px rgba(44, 43, 45, 0.7);
+  background-color: #333333;
+  opacity: 0.9;
+}
+.all .item .content_on_image .form_login .join_us, .all .item .content_on_image .form_login .sign_in {
+  height: 60px;
+  opacity: 0.7;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 1.8px;
+}
+.all .item .content_on_image .form_login .join_us {
+  margin-right: -4px;
+}
+.all .item .content_on_image .form_login #join_us, .all .item .content_on_image .form_login #sign_in {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  height: 330px;
+}
+.all .item .content_on_image .form_login #join_us input, .all .item .content_on_image .form_login #sign_in input {
+  display: block;
+  height: 40px;
+  background-color: #ffffff;
+  font-size: 18px;
+  padding: 0 0 0 10px;
+  border: none;
+}
+.all .item .content_on_image .form_login #join_us div, .all .item .content_on_image .form_login #sign_in div {
+  padding: 0 15px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 1.6px;
+}
+.all .item .content_on_image .form_login #join_us button, .all .item .content_on_image .form_login #sign_in button {
+  display: block;
+  border: none;
+  outline: none;
+  padding: 0;
+  font-family: "Catamaran-Black";
+  height: 40px;
+  font-size: 30px;
+  font-weight: bolder;
+  line-height: 36px;
+  letter-spacing: 3px;
+}
+.all .item .content_on_image .form_login #sign_in {
+  position: relative;
+  top: -345px;
+  height: 165px;
+}
+.all .item .block_after_image {
+  max-width: 1200px;
+}
+.all .item .block_after_image .blue_text {
+  margin-top: 70px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: "Catamaran-Black";
+  letter-spacing: 3px;
+}
+.all .item .block_after_image .easy_text {
+  max-width: 765px;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 1.6px;
+}
+.all .item .block_after_image .block_how_it_works {
+  margin-top: 35px;
+  margin-bottom: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.all .item .block_after_image .block_how_it_works div {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.all .item .block_after_image .block_how_it_works div img {
+  width: 70px;
+  height: 70px;
+}
+.all .item .block_after_image .block_how_it_works div .blue_text_small {
+  margin: 15px 0;
+  font-family: "Catamaran-Black";
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 1.8px;
+}
+.all .item .block_after_image .block_how_it_works div .easy_text {
+  text-align: center;
+  max-width: 250px;
+}
+.all .item footer {
+  max-width: 1920px;
+  background-color: #333333;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 1.6px;
+}
+.all .item footer div {
+  padding-left: 50px;
+  padding-right: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.all .item footer div img {
+  height: 65px;
+}
+.all .item footer div .connect_with_us {
+  width: 240px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.all .item footer div .connect_with_us .white_line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 30px;
+  line-height: 30px;
+}
+.all .item footer div .connect_with_us .white_line .line {
+  width: 45px;
+  height: 5px;
+  margin: 0 5px;
+  background-color: #ffffff;
+  border-radius: 3px;
+}
+.all .item footer div .connect_with_us .white_line div {
+  margin: 0;
+  padding: 0;
+  height: 30px;
+}
+.all .item footer div .connect_with_us div {
+  margin: 0;
+  padding: 0;
+  height: 30px;
+  line-height: 30px;
+}
+.all .item footer div .connect_with_us div a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.all .item footer div .connect_with_us div a:hover {
+  color: #ff6600;
+}
+
+/*# sourceMappingURL=style.css.map */

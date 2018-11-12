@@ -1,0 +1,640 @@
+@import 'fonts';
+$custom_font: Catamaran;
+
+@mixin flexbox($display, $flexdir, $justifycon, $alignitems) {
+	display: $display;
+	flex-direction: $flexdir;
+ 	justify-content: $justifycon;
+ 	align-items: $alignitems;
+}
+
+* {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.black_text {
+	color: #333333;
+	background-color: #ffffff;
+}
+
+.white_text {
+	color: #ffffff;
+	background-color: #333333;
+}
+
+.visible_forms {
+	height: 0;
+	visibility: hidden;
+}
+
+.form_height_small {
+	height: 255px;
+	margin-bottom: 165px;
+}
+
+.form_height_big {
+	height: 420px;
+}
+
+@media (max-width: 319px) {
+	.content_on_image {
+		@include flexbox(flex, column, space-around, center);
+		height: 950px;
+		.logo_and_text {
+			img {
+				margin-top: 50px;
+			}
+			.text {
+				height: 200px;
+			}
+		}
+		.form_login {
+			width: 310px;
+			.join_us, .sign_in {
+				width: 155px;
+			}
+			#join_us, #sign_in {
+				input {
+					width: 280px;
+				}
+				button {
+					width: 280px;
+				}
+			}
+		}
+	}
+	.img_main {
+		height:1000px;
+		img {
+			height:1000px;
+		}
+	}
+	.block_after_image {
+		margin: 0 10px;
+		min-width: 310px;
+		.blue_text {
+			font-size: 26px;
+		}
+	}
+	.block_how_it_works {
+		div {
+			img {
+				margin-top: 20px;
+			}
+		}	
+	}
+	footer {
+		div {
+			height: 200px;
+			@include flexbox(flex, column, flex-start, center);
+			img {
+				margin-top: 25px;
+			}
+			.connect_with_us {
+				.white_line {
+					line-height: 36px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 400px) and (min-width: 320px) {
+	.content_on_image {
+		@include flexbox(flex, column, space-around, center);
+		height: 950px;
+		.logo_and_text {
+			img {
+				margin-top: 50px;
+			}
+			.text {
+				height: 200px;
+			}
+		}
+		.form_login {
+			width: 310px;
+			.join_us, .sign_in {
+				width: 155px;
+			}
+			#join_us, #sign_in {
+				input {
+					width: 280px;
+				}
+				button {
+					width: 280px;
+				}
+			}
+		}
+	}
+	.img_main {
+		height:1000px;
+		img {
+			height:1000px;
+		}
+	}
+	.block_after_image {
+		margin: 0 10px;
+		min-width: 310px;
+		.blue_text {
+			font-size: 26px;
+		}
+	}
+	.block_how_it_works {
+		div {
+			img {
+				margin-top: 20px;
+			}
+		}	
+	}
+	footer {
+		div {
+			height: 200px;
+			@include flexbox(flex, column, flex-start, center);
+			img {
+				margin-top: 25px;
+			}
+			.connect_with_us {
+				.white_line {
+					line-height: 36px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 800px) and (min-width: 401px){
+	.content_on_image {
+		@include flexbox(flex, column, space-around, center);
+		height: 850px;
+		.form_login {
+			width: 380px;
+			.join_us, .sign_in {
+				width: 190px;
+			}
+			#join_us, #sign_in {
+				input {
+					width: 340px;
+				}
+				button {
+					width: 350px;
+				}
+			}
+		}
+	}
+	.img_main {
+		height: 850px;
+		img {
+			height: 850px;
+		}
+	}
+	.block_after_image {
+		margin: 0 10px;
+		.blue_text {
+			font-size: 30px;
+		}
+	}
+	.block_how_it_works {
+		div {
+			img {
+				margin-top: 20px;
+			}
+		}	
+	}
+	footer {
+		div {
+			height: 200px;
+			@include flexbox(flex, column, flex-start, center);
+			img {
+				margin-top: 25px;
+			}
+			.connect_with_us {
+				.white_line {
+					line-height: 36px;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 801px) {
+	.content_on_image {
+		height: 670px;
+		@include flexbox(flex, row, space-around, center);
+		.form_login {
+			width: 380px;
+			.join_us, .sign_in {
+				width: 190px;
+			}
+			#join_us, #sign_in {
+				input {
+					width: 340px;
+				}
+				button {
+					width: 350px;
+				}
+			}
+		}
+	}
+	.img_main {
+		height: 670px;
+		img {
+			width: 1920px;
+		}
+	}
+	.block_after_image {
+		margin: 0 auto;
+		.blue_text {
+			font-size: 30px;
+		}
+	}
+	footer {
+		div {
+			height: 120px;
+			@include flexbox(flex, row, space-between, center);	
+		}
+	}
+	
+}
+
+.switch_color_blue {
+	.item {
+		.img_main {
+			background-image: linear-gradient(to top, #00f1ff 0%, #00a8b2 100%);
+		}
+		.content_on_image {
+			.form_login {
+				#join_us, #sign_in {
+					button {
+						background-color: #ff6600;
+					}
+				}
+			}
+		}
+		.block_after_image {
+			.blue_text {
+				color: #00a8b2;
+			}
+			.block_how_it_works{
+				div {
+					.blue_text_small {
+						color: #00a8b2;
+					}
+				}
+			}
+		}
+	}
+}
+
+.switch_color_green {
+	.item {
+		.img_main {
+			background-image: linear-gradient(to top, #ABF26D 0%, #469400 100%);
+		}
+		.content_on_image {
+			.form_login {
+				
+				#join_us, #sign_in {
+					button {
+						background-color: #F13C76;
+					}
+				}
+			}
+		}
+		.block_after_image {
+			.blue_text {
+				color: #469400;
+			}
+			.block_how_it_works{
+				div {
+					.blue_text_small {
+						color: #469400;
+					}
+				}
+			}
+		}
+	}
+}
+
+.switch_color_yellow {
+	.item {
+		.img_main {
+			background-image: linear-gradient(to top, #FFDD73 0%, #A67D00 100%);
+		}
+		.content_on_image {
+			.form_login {
+				#join_us, #sign_in {
+					button {
+						background-color: #A67D00;
+					}
+				}
+			}
+		}
+		.block_after_image {
+			.blue_text {
+				color: #A67D00;
+			}
+			.block_how_it_works{
+				div {
+					.blue_text_small {
+						color: #A67D00;
+					}
+				}
+			}
+		}
+	}
+}
+
+.switch_color_magenta {
+	.item {
+		.img_main {
+			background-image: linear-gradient(to top, #E065BB 0%, #7D0057 100%);
+		}
+		.content_on_image {
+			.form_login {
+				#join_us, #sign_in {
+					button {
+						background-color: #C7F83E;
+					}
+				}
+			}
+		}
+		.block_after_image {
+			.blue_text {
+				color: #7D0057;
+			}
+			.block_how_it_works{
+				div {
+					.blue_text_small {
+						color: #7D0057;
+					}
+				}
+			}
+		}
+	}
+}
+
+.switch_color_black {
+	.item {
+		.img_main {
+			background-image: linear-gradient(to top, #A7A7A7 0%, #717171 100%);
+		}
+		.content_on_image {
+			.form_login {
+				#join_us, #sign_in {
+					button {
+						background-color: #555555;
+					}
+				}
+			}
+		}
+		.block_after_image {
+			.blue_text {
+				color: #393939;
+			}
+			.block_how_it_works{
+				div {
+					.blue_text_small {
+						color: #393939;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+.all {
+	font-family: $custom_font;
+	max-width: 1920px;
+	margin: 0 auto;
+	min-width: 320px;
+	.item {
+		max-width: 1920px;
+		min-width: 320px;
+		.img_main {
+			overflow: hidden;
+			img {
+				opacity: 0.3;
+			}
+		}
+		.content_on_image {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			max-width: 1200px;
+			min-width: 320px;
+			width: 100%;
+			overflow: hidden;
+			z-index: 2;
+			.logo_and_text {
+				@include flexbox(flex, column, center, center);
+				img {
+					width: 280px;
+					margin-bottom: 55px;
+				}
+				.text {
+					font-size: 36px;
+					max-width: 350px;
+					font-weight: 600;
+					color: #333333;
+					letter-spacing: 3.6px;
+					text-align: center;
+				}
+				.theme_color {
+					max-width: 350px;
+					@include flexbox(flex, row, center, center);
+					flex-wrap: wrap;
+					div {
+						width: 60px;
+						height: 40px;
+						margin: 10px 5px;
+					}
+					.t_blue {
+						background-color: blue;
+					}
+					.t_green {
+						background-color: green;
+					}
+					.t_yellow {
+						background-color: yellow;
+					}
+					.t_magenta {
+						background-color: magenta;
+					}
+					.t_black {
+						background-color: black;
+					}
+				}
+			}
+			.form_login {
+				padding: 0;
+				box-shadow: 0 6px 6px 1px rgba(44, 43, 45, 0.7);
+				background-color: #333333;
+				opacity: 0.9;
+				.join_us, .sign_in {
+					height: 60px;
+					opacity: 0.7;
+					border: none;
+					outline: none;
+					font-size: 18px;
+					font-weight: 400;
+					line-height: 36px;
+					letter-spacing: 1.8px;
+				}
+
+				.join_us {
+					margin-right: -4px;
+				}
+
+				#join_us, #sign_in {
+					@include flexbox(flex, column, space-between, center);
+					padding-top: 15px;
+					height: 330px;
+					input {
+						display: block;
+						height: 40px;
+						background-color: #ffffff;
+						font-size: 18px;
+						padding: 0 0 0 10px;
+						border: none;
+					}
+					div {
+						padding: 0 15px;
+						color: #ffffff;
+						font-size: 16px;
+						font-weight: 300;
+						line-height: 24px;
+						letter-spacing: 1.6px;
+					}
+					button {
+						display: block;
+						border: none;
+						outline: none;
+						padding: 0;
+						font-family: "Catamaran-Black";
+						height: 40px;
+						font-size: 30px;
+						font-weight: bolder;
+						line-height: 36px;
+						letter-spacing: 3px;
+					}
+				}
+				#sign_in {
+					position: relative;
+					top: -345px;
+					height: 165px;
+				}
+			}
+		}
+		.block_after_image {
+			max-width: 1200px;
+			.blue_text {
+				margin-top: 70px;
+				margin-bottom: 15px;
+				text-align: center;
+				font-family: "Catamaran-Black";
+				letter-spacing: 3px;
+			}
+			.easy_text {
+				max-width: 765px;
+				margin: 0 auto;
+				font-size: 16px;
+				font-weight: 600;
+				line-height: 24px;
+				letter-spacing: 1.6px;
+			}
+			.block_how_it_works {
+				margin-top: 35px;
+				margin-bottom: 70px;
+				@include flexbox(flex, row, space-around, flex-start);
+				flex-wrap: wrap;
+				div {
+					width: 300px;
+					@include flexbox(flex, column, space-between, center);
+					img {
+						width: 70px;
+						height: 70px;
+					}
+					.blue_text_small {
+						margin: 15px 0;
+						font-family: "Catamaran-Black";
+						font-size: 18px;
+						font-weight: 400;
+						letter-spacing: 1.8px;
+					}
+					.easy_text {
+						text-align: center;
+						max-width: 250px;
+					}
+				}
+			}
+		}
+		footer {
+			max-width: 1920px;
+			background-color: #333333;
+			color: #ffffff;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 36px;
+			letter-spacing: 1.6px;
+			div {
+				padding-left: 50px;
+				padding-right: 50px; 
+				max-width: 1200px;
+				margin: 0 auto;
+				img {
+					height: 65px;
+				}
+				.connect_with_us {
+					width: 240px;
+					margin: 0;
+					padding: 0;
+					@include flexbox(flex, column, center, center);
+					.white_line {
+						@include flexbox(flex, row, space-between, center);
+						margin: 0;
+						padding: 0;
+						height: 30px;
+						line-height: 30px;
+						.line {
+							width: 45px;
+							height: 5px;
+							margin: 0 5px;
+							background-color: #ffffff;
+							border-radius: 3px;
+						}
+						div {
+							margin: 0;
+							padding: 0;
+							height: 30px;
+						}
+					}
+					div	{
+						margin: 0;
+						padding: 0;
+						height: 30px;
+						line-height: 30px;
+						a {
+							text-decoration: none;
+							color: #ffffff;
+						}
+					}
+					div a:hover {
+						color: #ff6600;
+					}
+				}
+			}
+		}
+	}
+}
+
+
